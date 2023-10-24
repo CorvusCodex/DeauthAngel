@@ -1,3 +1,4 @@
+<p align="center">
   <img src="https://github.com/CorvusCodex/DeauthAngel/blob/main/deauthangel.png?raw=true">
 </p>
 
