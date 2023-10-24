@@ -28,6 +28,21 @@ If these tools are not installed, the script will prompt you to install them.  <
 Linux OS <br>
 A network adapter that supports monitor mode and packet injection
 
+## Support
+
+Support my work:
+
+- BTC: bc1q7wth254atug2p4v9j3krk9kauc0ehys2u8tgg3
+- ETH & BNB: 0x68B6D33Ad1A3e0aFaDA60d6ADf8594601BE492F0
+- Buy me a coffee: https://www.buymeacoffee.com/CorvusCodex
+
+### Support my work for month or year so i can continue to work on my projects:
+https://www.buymeacoffee.com/corvuscodex/membership
+
+### Buy me some equipment:
+https://www.buymeacoffee.com/corvuscodex/wishlist
+
+
 ## Disclaimer
 This script should only be used for legal purposes, such as penetration testing with proper authorization or for educational purposes. Misuse of this script can lead to legal consequences. Please use responsibly!
 
