@@ -18,6 +18,11 @@ This script is a powerful tool for network analysis and security. It scans for w
 ```bash
 ./deauthenticator.sh <wireless_interface>
 ```
+
+```bash
+./deauthenticator.sh <wireless_interface> loop
+```
+
 ## Requirements
 This script requires the following tools:
 
