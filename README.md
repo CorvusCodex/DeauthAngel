@@ -26,6 +26,7 @@ This script is a powerful tool for network analysis and security. It scans for w
 Example:
 
 Run with interface: ./script.sh wlan0
+
 Run in loop mode: ./script.sh wlan0 loop
 
 ## Requirements
